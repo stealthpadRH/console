@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* ── brand: emerald glass on the night field ── */
+:root {
+  --night: #05110f;
+  --void: #020301;
+  --panel: #081813;
+  --panel-2: #0c211b;
+  --line: #183a30;
+  --line-2: #22503f;
+  --emerald: #34b27b;
+  --glass: #299867;
+  --glass-deep: #176945;
+  --glass-bright: #77d6a8;
+  --highlight: #f7fff5;
+  --mist: #9dbfb0; /* body copy on night, 9.6:1 */
+  --dust: #6f9484; /* micro labels on night, 5.6:1 */
+  --zec: #e8b04b;
+  --aleo: #3fc1c9;
+  --usdg: #a6f0c6;
+  --risk: #e3806c;
+}
+
+@theme inline {
+  --color-night: var(--night);
+  --color-void: var(--void);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-line: var(--line);
+  --color-line-2: var(--line-2);
+  --color-emerald: var(--emerald);
+  --color-glass: var(--glass);
+  --color-glass-deep: var(--glass-deep);
+  --color-glass-bright: var(--glass-bright);
+  --color-highlight: var(--highlight);
+  --color-mist: var(--mist);
+  --color-dust: var(--dust);
+  --color-zec: var(--zec);
+  --color-aleo: var(--aleo);
+  --color-usdg: var(--usdg);
+  --color-risk: var(--risk);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-code);
+  --font-display: var(--font-display);
+}
+
+html { background: var(--night); }
+body {
+  background: var(--night);
+  color: var(--highlight);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: clip;
+}
+::selection { background: var(--emerald); color: var(--night); }
+
+@layer components {
+  .display { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.038em; line-height: 1.02; }
+  .kicker { font-family: var(--font-code); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--glass-bright); }
+  .micro { font-family: var(--font-code); font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dust); }
+  .num { font-family: var(--font-code); font-variant-numeric: tabular-nums; }
+  .lede { color: var(--mist); font-size: 1.0625rem; line-height: 1.7; }
+
+  .panel {
+    background: linear-gradient(180deg, rgb(119 214 168 / 0.045), rgb(119 214 168 / 0) 42%), var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+  .banner { padding: 8px 16px; text-align: center; font-size: 12.5px; color: var(--night); background: var(--glass-bright); }
+
+  .chip {
+    display: inline-flex; align-items: center; min-height: 36px; padding: 0 12px; border-radius: 10px;
+    border: 1.5px solid var(--line-2); background: var(--panel); font-family: var(--font-code); font-size: 12.5px; color: var(--mist);
+  }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 22px; border-radius: 11px;
+    font-weight: 600; color: var(--night); background: var(--emerald); border: 1.5px solid var(--glass-bright);
+    box-shadow: 5px 5px 0 var(--glass-deep); cursor: pointer;
+  }
+  .btn:disabled { opacity: 0.45; cursor: default; box-shadow: none; }
+  .btn-sm { height: 38px; padding: 0 14px; font-size: 13.5px; box-shadow: 3px 3px 0 var(--glass-deep); }
+  .field {
+    height: 46px; padding: 0 14px; border-radius: 10px; border: 1.5px solid var(--line-2);
+    background: var(--night); color: var(--highlight); outline: none;
+  }
+  .field:focus { border-color: var(--emerald); }
+}

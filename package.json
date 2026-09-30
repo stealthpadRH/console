@@ -1,0 +1,33 @@
+{
+  "name": "stealthpad-console",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Stealthpad app: board, launch, coin, claim, keeper and receipts on Robinhood Chain",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@openzeppelin/merkle-tree": "1.0.8",
+    "next": "16.3.7",
+    "postgres": "3.4.9",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1",
+    "sharp": "^0.35.5",
+    "viem": "2.56.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

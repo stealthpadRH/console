@@ -1,0 +1,13 @@
+{
+  "name": "Stealthpad",
+  "short_name": "Stealthpad",
+  "description": "Launch a coin. Holders get paid in Zcash.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05110F",
+  "theme_color": "#05110F",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
